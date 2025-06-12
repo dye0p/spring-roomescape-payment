@@ -12,7 +12,7 @@ public record TossPaymentsResponse(
 ) {
     public Payment toEntity(final Long reservationId) {
         return Payment.of(
-                this.requestedAt,
+                this.orderId,
                 this.paymentKey,
                 this.totalAmount,
                 reservationId
